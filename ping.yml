@@ -1,4 +1,4 @@
 - hosts: 172.31.29.135
   tasks:
-    - name: ping connection to the production server
+    - name: ping connection to the one production server
       ping:
