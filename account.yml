@@ -2,3 +2,19 @@
 - hosts: [production]
   become: yes
   tasks:
+    - name: Adding a group called "CTM"
+      group:
+        name: ctm
+        gid: 5000
+        state: present
+    - name: Create a user named "Bob"
+      user:
+        name: bob
+        comment: temporary user
+        uid: 5001
+        group: ctm
+        shell: /bin/bash
+        password: ''
+    - name: Force 'bob' to change password
+      command:
+        chage -d 0 bob
