@@ -15,6 +15,6 @@
         group: ctm
         shell: /bin/bash
         password: ''
-    - name: Force 'bob' to change password
+    - name: Force bob to change password
       command:
         chage -d 0 bob
