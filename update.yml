@@ -2,4 +2,9 @@
 - hosts: [production]
   become: yes
   tasks:
-    - name: Updating package
+    - name: Update all packages to the latest version
+      apt:
+        upgrade: dist
+        
+    
+    
