@@ -1,0 +1,5 @@
+---
+- hosts: [production]
+  become: yes
+  tasks:
+    - name: Updating package
