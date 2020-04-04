@@ -3,3 +3,9 @@
   become: yes
   tasks:
     - name: Installing the package
+      apt: name={{ item }} state =latest
+      with_items:
+         - vim
+         - git
+         - curl
+        
