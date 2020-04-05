@@ -7,13 +7,13 @@
         name: ctm
         gid: 5000
         state: present
-    - name: Create a user named "Bob"
+    - name: Create a user named "Steve"
       user:
-        name: bob
+        name: steve
         comment: temporary user
-        uid: 5001
+        uid: 5005
         group: ctm
         shell: /bin/bash
         password: ''
-    - name: Force bob to change password
-      command: chage -d 0 bob
+    - name: Force Steve to change password
+      command: chage -d 0 steve
