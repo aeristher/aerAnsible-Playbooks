@@ -2,7 +2,7 @@
 - hosts: [production]
   become: yes
   tasks:
-    - name: Installing the package
+    - name: Installing vim, git, and curl package
       apt: name={{ item }} state =latest
       with_items:
          - vim
